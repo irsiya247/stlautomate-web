@@ -14,6 +14,23 @@
         .card:hover { border-color: #38BDF8; transform: translateY(-5px); background: rgba(30, 41, 59, 0.8); }
         .project-card { background: linear-gradient(145deg, rgba(15,23,42,0.6) 0%, rgba(11,17,32,0.9) 100%); border: 1px solid rgba(51,65,85,0.4); }
         .project-card:hover { border-color: rgba(56,189,248,0.5); }
+
+        /* Platinum Standard: True Fluid Typography & Viewport Scaling */
+        .fluid-title { 
+            font-size: clamp(3rem, 6.5vw, 6.5rem); 
+            line-height: 1.05; 
+            white-space: nowrap; 
+        }
+        .fluid-spacing { margin-bottom: clamp(2rem, 6vh, 6rem); }
+        .fluid-padding { 
+            padding-top: clamp(2rem, 5vh, 4rem); 
+            padding-bottom: clamp(2rem, 5vh, 4rem); 
+        }
+        
+        /* Mobile override to allow word-wrap only on phones */
+        @media (max-width: 768px) {
+            .fluid-title { white-space: normal; }
+        }
     </style>
 </head>
 <body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
@@ -28,12 +45,12 @@
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 pt-12 pb-20">
-        <header class="text-center mb-16">
+    <main class="max-w-6xl mx-auto px-6 fluid-padding">
+        <header class="text-center fluid-spacing">
             <div class="inline-block border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
                 Maximize Efficiency
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6">
+            <h1 class="fluid-title font-extrabold tracking-tighter mb-6">
                 Automate The <span class="accent-gradient">Bottom Line</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
@@ -41,7 +58,7 @@
             </p>
         </header>
 
-        <section class="grid md:grid-cols-3 gap-8 mb-32">
+        <section class="grid md:grid-cols-3 gap-8 fluid-spacing">
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Impact Area 01</div>
                 <h3 class="text-2xl font-bold mb-3">Workforce Multipliers</h3>
@@ -59,7 +76,7 @@
             </div>
         </section>
 
-        <section class="mb-20">
+        <section class="fluid-spacing">
             <div class="flex items-center gap-6 mb-12">
                 <h2 class="text-3xl font-extrabold tracking-tight">Proven Business Impact</h2>
                 <div class="h-[1px] flex-grow bg-slate-800"></div>
@@ -88,14 +105,14 @@
             </div>
         </section>
 
-        <div class="mt-28 text-center">
+        <div class="mt-12 text-center">
             <a href="mailto:contact@stlautomate.com" class="inline-block bg-white text-slate-950 font-extrabold py-5 px-14 rounded-full transition duration-300 shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:scale-105">
                 Calculate Your ROI
             </a>
         </div>
     </main>
 
-    <footer class="text-center py-16 text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em] border-t border-slate-900/50">
+    <footer class="text-center py-12 text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em] border-t border-slate-900/50">
         &copy; 2026 STL Automate // Secure Infrastructure // St. Louis, MO
     </footer>
 </body>
