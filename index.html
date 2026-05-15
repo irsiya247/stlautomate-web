@@ -12,6 +12,8 @@
         .accent-gradient { background: linear-gradient(to right, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(51, 65, 85, 0.3); border-radius: 1rem; padding: 2rem; transition: all 0.3s ease; }
         .card:hover { border-color: #38BDF8; transform: translateY(-5px); background: rgba(30, 41, 59, 0.8); }
+        .project-card { background: linear-gradient(145deg, rgba(15,23,42,0.6) 0%, rgba(11,17,32,0.9) 100%); border: 1px solid rgba(51,65,85,0.4); }
+        .project-card:hover { border-color: rgba(56,189,248,0.5); }
     </style>
 </head>
 <body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
@@ -36,21 +38,50 @@
             </p>
         </header>
 
-        <section class="grid md:grid-cols-3 gap-8">
+        <section class="grid md:grid-cols-3 gap-8 mb-32">
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Protocol 01</div>
                 <h3 class="text-2xl font-bold mb-3">AI Workflows</h3>
-                <p class="text-slate-400 leading-relaxed">Autonomous agent pipelines and LLM integrations designed to scale operations without increasing headcount.</p>
+                <p class="text-slate-400 leading-relaxed text-sm">Autonomous pipelines and tool integrations designed to scale operations and eliminate manual overhead.</p>
             </div>
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Protocol 02</div>
                 <h3 class="text-2xl font-bold mb-3">Security Architecture</h3>
-                <p class="text-slate-400 leading-relaxed">Zero-trust infrastructure hardened against modern threats. Built on CompTIA Security+ frameworks.</p>
+                <p class="text-slate-400 leading-relaxed text-sm">Zero-trust infrastructure hardened against modern threats. Built rigorously on Security+ frameworks.</p>
             </div>
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Protocol 03</div>
                 <h3 class="text-2xl font-bold mb-3">Managed Automation</h3>
-                <p class="text-slate-400 leading-relaxed">End-to-end technical ecosystems that bridge the gap between legacy hardware and modern AI tools.</p>
+                <p class="text-slate-400 leading-relaxed text-sm">End-to-end technical ecosystems that bridge the gap between legacy systems and modern intelligence.</p>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <div class="flex items-center gap-6 mb-12">
+                <h2 class="text-3xl font-extrabold tracking-tight">Active Deployments</h2>
+                <div class="h-[1px] flex-grow bg-slate-800"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card rounded-2xl p-8 transition duration-300">
+                    <div class="text-sky-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Deployment // FinTech</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Algorithmic Volume Indicator</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Engineered a custom high-frequency Phase 2 Absorption indicator to isolate institutional order flow anomalies in real-time market environments.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 font-medium">JavaScript</span>
+                        <span class="text-[10px] px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 font-medium">Data Analytics</span>
+                    </div>
+                </div>
+
+                <div class="project-card rounded-2xl p-8 transition duration-300">
+                    <div class="text-sky-500 text-[10px] font-bold tracking-[0.2em] uppercase mb-3">Deployment // Ops</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">Automated Lead Infrastructure</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Designed an end-to-end intake pipeline utilizing webhooks to capture, categorize, and route inquiry data directly into secure project management workspaces.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-[10px] px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 font-medium">Webhooks</span>
+                        <span class="text-[10px] px-3 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 font-medium">Workflow Automation</span>
+                    </div>
+                </div>
             </div>
         </section>
 
