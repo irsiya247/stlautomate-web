@@ -163,9 +163,16 @@ document.addEventListener('mouseleave', (e) => {
 
 function handleFormSubmit(e) {
     e.preventDefault();
-    // Insert your webhook or form handler endpoint here
-    alert('Thank you! Redirecting to your 1-page guide download...');
-    window.open('/dubai-lead-blueprint.pdf', '_blank'); // Point to your PDF location
+    
+    // Create a hidden link to force the download safely
+    const link = document.createElement('a');
+    link.href = 'dubai-lead-blueprint.pdf';
+    link.download = 'dubai-lead-blueprint.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    alert('Thank you! Your guide is downloading.');
     closePopup();
 }
 </script>
