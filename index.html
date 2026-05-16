@@ -15,27 +15,21 @@
         .project-card { background: linear-gradient(145deg, rgba(15,23,42,0.6) 0%, rgba(11,17,32,0.9) 100%); border: 1px solid rgba(51,65,85,0.4); }
         .project-card:hover { border-color: rgba(56,189,248,0.5); }
 
-        /* Platinum Standard: True Fluid Typography & Viewport Scaling */
+        /* Recalibrated Viewport Scaling */
         .fluid-title { 
-            font-size: clamp(3rem, 6.5vw, 6.5rem); 
-            line-height: 1.05; 
-            white-space: nowrap; 
+            font-size: clamp(2.5rem, 6vw, 5.5rem); 
+            line-height: 1.1;
         }
-        .fluid-spacing { margin-bottom: clamp(2rem, 6vh, 6rem); }
+        .fluid-spacing { margin-bottom: clamp(2rem, 5vh, 5rem); }
         .fluid-padding { 
-            padding-top: clamp(2rem, 5vh, 4rem); 
-            padding-bottom: clamp(2rem, 5vh, 4rem); 
-        }
-        
-        /* Mobile override to allow word-wrap only on phones */
-        @media (max-width: 768px) {
-            .fluid-title { white-space: normal; }
+            padding-top: clamp(1.5rem, 4vh, 3rem); 
+            padding-bottom: clamp(2rem, 4vh, 4rem); 
         }
     </style>
 </head>
-<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHIpxiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')]">
     
-    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
         <div class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
         </div>
@@ -46,27 +40,27 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 fluid-padding">
-        <header class="text-center fluid-spacing">
+        <header class="text-center fluid-spacing max-w-5xl mx-auto">
             <div class="inline-block border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
                 Maximize Efficiency
             </div>
-            <h1 class="fluid-title font-extrabold tracking-tighter mb-6">
+            <h1 class="fluid-title font-extrabold tracking-tighter mb-6 block">
                 Automate The <span class="accent-gradient">Bottom Line</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
+            <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-medium">
                 We engineer AI workflows and secure infrastructure that eliminate manual labor, reduce operational bloat, and drive measurable ROI.
             </p>
         </header>
 
-        <section class="grid md:grid-cols-3 gap-8 fluid-spacing">
+        <section class="grid md:grid-cols-3 gap-6 lg:gap-8 fluid-spacing">
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Impact Area 01</div>
-                <h3 class="text-2xl font-bold mb-3">Workforce Multipliers</h3>
+                <h3 class="text-xl lg:text-2xl font-bold mb-3">Workforce Multipliers</h3>
                 <p class="text-slate-400 leading-relaxed text-sm">Deploy autonomous AI agents to execute routine tasks 24/7. Scale your operational output without expanding payroll.</p>
             </div>
             <div class="card">
                 <div class="text-slate-500 text-[10px] mb-4 tracking-[0.2em] font-bold uppercase">Impact Area 02</div>
-                <h3 class="text-2xl font-bold mb-3">Risk Mitigation</h3>
+                <h3 class="text-xl lg:text-2xl font-bold mb-3">Risk Mitigation</h3>
                 <p class="text-slate-400 leading-relaxed text-sm">Enterprise-grade security architecture that protects your bottom line from expensive breaches and compliance failures.</p>
             </div>
             <div class="card">
@@ -78,7 +72,7 @@
 
         <section class="fluid-spacing">
             <div class="flex items-center gap-6 mb-12">
-                <h2 class="text-3xl font-extrabold tracking-tight">Proven Business Impact</h2>
+                <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Proven Business Impact</h2>
                 <div class="h-[1px] flex-grow bg-slate-800"></div>
             </div>
             
