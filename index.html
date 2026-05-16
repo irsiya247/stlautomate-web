@@ -117,6 +117,57 @@
             </div>
         </div>
     </footer>
+<div id="automation-audit-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
+    <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 12px; max-width: 500px; width: 100%; padding: 40px; position: relative; color: #c9d1d9; box-shadow: 0 10px 25px rgba(0,0,0,0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        <button onclick="closePopup()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #8b949e; font-size: 24px; cursor: pointer;">&times;</button>
+        
+        <h3 style="color: #58a6ff; margin-top: 0; font-size: 22px; line-height: 1.4;">Get a Free Automation Audit</h3>
+        <p style="font-size: 15px; line-height: 1.6; color: #8b949e; margin-bottom: 25px;">See How We Generated 47 Leads/Week for a Dubai Real Estate Agency. Download our 1-page guide instantly.</p>
+        
+        <form id="lead-form" onsubmit="handleFormSubmit(event)">
+            <div style="margin-bottom: 15px;">
+                <input type="text" placeholder="First Name" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <input type="email" placeholder="Business Email" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
+            </div>
+            <button type="submit" style="width: 100%; padding: 12px; background: #238636; border: none; border-radius: 6px; color: #ffffff; font-weight: bold; cursor: pointer; font-size: 16px;">Claim Free 1-Page Guide</button>
+        </form>
+    </div>
+</div>
 
+<script>
+// Trigger logic: Shows after 15 seconds or on exit intent
+let popupShown = false;
+
+function showPopup() {
+    if (!popupShown) {
+        document.getElementById('automation-audit-popup').style.display = 'flex';
+        popupShown = true;
+    }
+}
+
+function closePopup() {
+    document.getElementById('automation-audit-popup').style.display = 'none';
+}
+
+// 1. Timed Trigger (15 Seconds)
+setTimeout(showPopup, 15000);
+
+// 2. Exit Intent Trigger
+document.addEventListener('mouseleave', (e) => {
+    if (e.clientY < 20) {
+        showPopup();
+    }
+});
+
+function handleFormSubmit(e) {
+    e.preventDefault();
+    // Insert your webhook or form handler endpoint here
+    alert('Thank you! Redirecting to your 1-page guide download...');
+    window.open('/dubai-lead-blueprint.pdf', '_blank'); // Point to your PDF location
+    closePopup();
+}
+</script>
 </body>
 </html>
