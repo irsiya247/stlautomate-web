@@ -164,38 +164,34 @@ document.addEventListener('mouseleave', (e) => {
     }
 });
 
-async function handleFormSubmit(e) {
+function handleFormSubmit(e) {
     e.preventDefault();
 
-    // 1. Capture the input values
+    // 1. Capture the input values immediately
     const firstName = e.target[0].value;
     const email = e.target[1].value;
 
     try {
-        // 2. Route to your Zapier/Make webhook
-        // Uncomment and add your URL when ready:
-        /*
-        await fetch('YOUR_WEBHOOK_URL_HERE', {
-            method: 'POST',
-            body: JSON.stringify({ name: firstName, email: email }),
-            headers: { 'Content-Type': 'application/json' }
-        });
-        */
-
-        // 3. Deliver the asset
+        // 2. DELIVER THE ASSET FIRST (Bypasses popup blockers instantly)
         const link = document.createElement('a');
         link.href = 'dubai-lead-blueprint.pdf';
         link.download = 'dubai-lead-blueprint.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-
+        
         alert('Thank you! Your guide is downloading.');
         closePopup();
 
+        // 3. FIRE WEBHOOK IN THE BACKGROUND (Sends data quietly to Zapier)
+        fetch('https://hooks.zapier.com/hooks/catch/364519967/xxxxxx/', {
+            method: 'POST',
+            body: JSON.stringify({ name: firstName, email: email }),
+            headers: { 'Content-Type': 'application/json' }
+        }).catch(error => console.error("Webhook failed silently:", error));
+
     } catch (error) {
-        console.error("Lead capture failed:", error);
-        alert('There was an issue processing your request. Please try again.');
+        console.error("Lead capture process error:", error);
     }
 }
 </script>
