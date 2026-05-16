@@ -164,19 +164,39 @@ document.addEventListener('mouseleave', (e) => {
     }
 });
 
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
     e.preventDefault();
-    
-    // Create a hidden link to force the download safely
-    const link = document.createElement('a');
-    link.href = 'dubai-lead-blueprint.pdf';
-    link.download = 'dubai-lead-blueprint.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
 
-    alert('Thank you! Your guide is downloading.');
-    closePopup();
+    // 1. Capture the input values
+    const firstName = e.target[0].value;
+    const email = e.target[1].value;
+
+    try {
+        // 2. Route to your Zapier/Make webhook
+        // Uncomment and add your URL when ready:
+        /*
+        await fetch('YOUR_WEBHOOK_URL_HERE', {
+            method: 'POST',
+            body: JSON.stringify({ name: firstName, email: email }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        */
+
+        // 3. Deliver the asset
+        const link = document.createElement('a');
+        link.href = 'dubai-lead-blueprint.pdf';
+        link.download = 'dubai-lead-blueprint.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        alert('Thank you! Your guide is downloading.');
+        closePopup();
+
+    } catch (error) {
+        console.error("Lead capture failed:", error);
+        alert('There was an issue processing your request. Please try again.');
+    }
 }
 </script>
 </body>
