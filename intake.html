@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiate Workflow | STL Automate</title>
+    <meta name="description" content="Calculate your automation ROI and initiate an infrastructure audit.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body { background-color: #0B1120; color: #F8FAFC; font-family: 'Inter', sans-serif; }
+        .accent-gradient { background: linear-gradient(to right, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .input-field { 
+            background: rgba(15, 23, 42, 0.6); 
+            border: 1px solid rgba(51, 65, 85, 0.5); 
+            color: #fff; 
+            transition: all 0.3s ease; 
+        }
+        .input-field:focus { 
+            border-color: #38BDF8; 
+            outline: none; 
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.15); 
+        }
+    </style>
+</head>
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHIpxiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')]">
+    
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <a href="index.html" class="text-2xl font-extrabold tracking-tight">
+            STL <span class="text-sky-500">Automate</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+            <a href="infrastructure.html" class="text-slate-400 hover:text-white transition">Infrastructure</a>
+            <a href="portfolio.html" class="text-slate-400 hover:text-white transition">Portfolio</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-20">
+        <header class="text-center mb-12">
+            <div class="inline-block border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
+                Secure Intake
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 block">
+                Initiate <span class="accent-gradient">Workflow</span>
+            </h1>
+            <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed">
+                Detail your operational bottlenecks below. We will analyze the data and calculate the projected ROI of a custom automated infrastructure.
+            </p>
+        </header>
+
+        <form action="https://formspree.io/f/mqenrgda" method="POST" class="bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm">
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Stakeholder Name</label>
+                    <input type="text" name="name" required class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Corporate Email</label>
+                    <input type="email" name="email" required class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="director@company.com">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Primary Inefficiency / Target Area</label>
+                <select name="target_area" class="input-field w-full rounded-lg px-4 py-3 text-sm appearance-none">
+                    <option value="manual_data">Manual Data Entry & Transfer</option>
+                    <option value="security">Security Infrastructure / Compliance</option>
+                    <option value="pipeline">Lead / Revenue Pipeline Speed</option>
+                    <option value="other">Other Technical Bottlenecks</option>
+                </select>
+            </div>
+
+            <div class="mb-8">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Estimated Manual Hours Lost Weekly</label>
+                <div class="flex items-center gap-4">
+                    <input type="range" name="hours_lost" min="10" max="100" step="10" value="30" class="w-full accent-sky-500" oninput="this.nextElementSibling.value = this.value + '+'">
+                    <output class="text-sky-400 font-mono font-bold text-lg w-12">30+</output>
+                </div>
+            </div>
+
+            <div class="mb-8">
+                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Additional Context (Optional)</label>
+                <textarea name="context" rows="3" class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="Briefly describe the software stack currently in use..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-white text-slate-950 font-extrabold py-4 rounded-xl transition duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:scale-[1.02]">
+                Submit Architecture Request
+            </button>
+            <p class="text-center text-[10px] text-slate-600 font-mono uppercase tracking-[0.1em] mt-4">
+                Transmission Secured via 256-bit Encryption
+            </p>
+        </form>
+    </main>
+</body>
+</html>
