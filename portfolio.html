@@ -10,9 +10,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
         body { background-color: #0B1120; color: #F8FAFC; font-family: 'Inter', sans-serif; }
         .accent-gradient { background: linear-gradient(to right, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .project-card { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 0.75rem; transition: all 0.3s ease; }
+        .project-card { background: rgba(51, 41, 59, 0.4); border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 0.75rem; transition: all 0.3s ease; }
         .project-card:hover { border-color: #38BDF8; transform: translateY(-3px); background: rgba(30, 41, 59, 0.7); }
-        
+
         /* Strict sizing for compact grid widgets */
         .compact-video-container {
             width: 100%;
@@ -21,13 +21,13 @@
         }
     </style>
 </head>
-<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHIpxiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')]">
-    
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMC41IiBmaWxsPSIjMzE0MTRDIi8+PC9zdmc+')]">
+
     <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
         </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+        <div class="hidden md:flex gap-8 text-sm font-semibold">
             <a href="infrastructure.html" class="text-slate-400 hover:text-white transition">Infrastructure</a>
             <a href="portfolio.html" class="text-white transition">Portfolio</a>
             <a href="intake.html" class="border border-slate-700 px-5 py-2 rounded-lg hover:bg-slate-800 transition">Contact Expert</a>
@@ -85,8 +85,16 @@
         </div>
     </main>
 
-    <footer class="text-center py-12 text-slate-600 text-[10px] font-mono uppercase tracking-[0.2em] border-t border-slate-900/50 mt-12">
-        &copy; 2026 STL Automate // Secure Infrastructure // St. Louis, MO
+    <footer class="border-t border-slate-900 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-xs text-slate-600 font-medium">© 2024 STL Automate. All rights reserved.</div>
+            <div class="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <a href="infrastructure.html" class="hover:text-white transition">Systems</a>
+                <a href="portfolio.html" class="hover:text-white transition">Projects</a>
+                <a href="#" class="hover:text-white transition">Privacy</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
