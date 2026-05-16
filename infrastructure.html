@@ -12,11 +12,17 @@
         .spec-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; color: #64748B; margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
-    
-    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
-        <a href="index.html" class="text-2xl font-extrabold tracking-tight">STL <span class="text-sky-500">Automate</span></a>
-        <a href="index.html" class="text-sm font-semibold text-slate-400 hover:text-white transition">← Return to Overview</a>
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoNTEsIDY1LCA4NSwgMC4xKSIvPjwvc3ZnPg==')]">
+
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <a href="index.html" class="text-2xl font-extrabold tracking-tight">
+            STL <span class="text-sky-500">Automate</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+            <a href="infrastructure.html" class="text-white">Infrastructure</a>
+            <a href="portfolio.html" class="text-slate-400 hover:text-white transition">Portfolio</a>
+            <a href="intake.html" class="border border-slate-700 px-5 py-2 rounded-lg hover:bg-slate-800 transition">Contact Expert</a>
+        </div>
     </nav>
 
     <main class="max-w-4xl mx-auto px-6 py-20">
@@ -31,52 +37,48 @@
                 <div class="spec-label text-sky-400">Security Standard</div>
                 <h3 class="text-2xl font-bold mb-4">Hardened Infrastructure</h3>
                 <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                    All deployments are architected following CompTIA Security+ frameworks. We prioritize Zero-Trust environments, ensuring that every automation touchpoint is authenticated, encrypted, and logged.
+                    Every deployment follows a zero-trust architecture. We utilize encrypted tunnels for all data transit and multi-layer authentication for control plane access.
                 </p>
                 <ul class="grid grid-cols-2 gap-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
-                    <li>• AES-256 Encryption</li>
-                    <li>• Webhook Authentication</li>
-                    <li>• Principle of Least Privilege</li>
-                    <li>• API Security Audits</li>
-                </ul>
-            </div>
-
-            <div class="tech-border border-indigo-500">
-                <div class="spec-label text-indigo-400">Intelligence Layer</div>
-                <h3 class="text-2xl font-bold mb-4">Autonomous Agent Logic</h3>
-                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                    We utilize advanced LLM orchestration to build self-correcting workflows. This isn't just "if/then" logic; these are systems capable of parsing unstructured data and executing complex decision-making trees.
-                </p>
-                <ul class="grid grid-cols-2 gap-4 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
-                    <li>• Custom Pine Script / JS</li>
-                    <li>• Vector Database Integration</li>
-                    <li>• Natural Language Parsing</li>
-                    <li>• Automated Error Handling</li>
+                    <li class="flex items-center gap-2">
+                        <div class="w-1 h-1 bg-sky-500 rounded-full"></div>
+                        AES-256 Encryption
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <div class="w-1 h-1 bg-sky-500 rounded-full"></div>
+                        ISO 27001 Ready
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <div class="w-1 h-1 bg-sky-500 rounded-full"></div>
+                        SOC2 Compliance
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <div class="w-1 h-1 bg-sky-500 rounded-full"></div>
+                        VPC Isolation
+                    </li>
                 </ul>
             </div>
 
             <div class="tech-border border-slate-700">
-                <div class="spec-label text-slate-500">The Power Grid</div>
-                <h3 class="text-2xl font-bold mb-4">The Stack</h3>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded text-xs font-semibold text-slate-300">Zapier / Make</span>
-                    <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded text-xs font-semibold text-slate-300">Python / JavaScript</span>
-                    <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded text-xs font-semibold text-slate-300">RESTful APIs</span>
-                    <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded text-xs font-semibold text-slate-300">SQL / NoSQL</span>
-                    <span class="px-4 py-2 bg-slate-900 border border-slate-800 rounded text-xs font-semibold text-slate-300">Cloud Infrastructure</span>
-                </div>
+                <div class="spec-label text-sky-400">Compute Layer</div>
+                <h3 class="text-2xl font-bold mb-4">Edge Automation</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    By leveraging distributed edge nodes, we reduce latency for automation triggers by up to 85% compared to centralized cloud models.
+                </p>
             </div>
         </section>
-
-        <div class="mt-28 p-12 bg-sky-500/5 border border-sky-500/10 rounded-2xl text-center">
-            <h4 class="text-xl font-bold mb-2">Technical Inquiry?</h4>
-            <p class="text-slate-400 text-sm mb-6">Direct access to the lead engineer for infrastructure audits.</p>
-            <a href="mailto:contact@stlautomate.com" class="text-sky-400 font-bold hover:text-sky-300 underline underline-offset-8">contact@stlautomate.com</a>
-        </div>
     </main>
 
-    <footer class="text-center py-16 text-slate-700 text-[9px] font-mono uppercase tracking-[0.3em]">
-        // Secure Infrastructure // Zero Trust // 2026
+    <footer class="border-t border-slate-900 py-12 mt-20">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-xs text-slate-600 font-medium">© 2024 STL Automate. All rights reserved.</div>
+            <div class="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <a href="#" class="hover:text-white transition">Network Status</a>
+                <a href="#" class="hover:text-white transition">API Docs</a>
+                <a href="#" class="hover:text-white transition">Privacy</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
