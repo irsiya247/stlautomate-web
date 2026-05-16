@@ -184,7 +184,7 @@ function handleFormSubmit(e) {
         closePopup();
 
         // 3. FIRE MAKE WEBHOOK IN THE BACKGROUND (100% Free Tier)
-        fetch('PASTE_YOUR_LIVE_MAKE_WEBHOOK_URL_HERE', {
+        fetch('https://hook.us2.make.com/8kec2dnxogj2pusai87ve7ecc5ba1d69', {
             method: 'POST',
             body: JSON.stringify({ name: firstName, email: email }),
             headers: { 'Content-Type': 'application/json' }
