@@ -1,0 +1,166 @@
+
+<h2 class="sr-only">Intelligent Workflows interactive card: three phases — digital chaos, automated node flow, and clean dashboard outcomes</h2>
+
+<style>
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes iw-wob { 0%,100%{transform:rotate(-3deg)} 50%{transform:rotate(3deg)} }
+  @keyframes iw-dft { 0%,100%{transform:translateY(0) rotate(-1deg)} 50%{transform:translateY(-5px) rotate(1.5deg)} }
+  .iw-a1{animation:iw-wob 3s ease-in-out infinite}
+  .iw-a2{animation:iw-dft 4s ease-in-out infinite .5s}
+  .iw-a3{animation:iw-wob 3.5s ease-in-out infinite 1s}
+  .iw-a4{animation:iw-dft 5s ease-in-out infinite .3s}
+  .iw-a5{animation:iw-wob 4s ease-in-out infinite 1.5s}
+}
+.iw-ph{visibility:hidden;opacity:0;pointer-events:none;position:absolute;inset:0;transition:opacity .35s}
+.iw-ph.active{visibility:visible;opacity:1;pointer-events:auto}
+.iw-dot{width:6px;height:6px;border-radius:50%;background:var(--color-border-secondary);border:none;padding:0;cursor:pointer;transition:all .2s;display:inline-block}
+.iw-dot.active{background:var(--color-text-primary);transform:scale(1.4)}
+.iw-badge{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:2px 9px;border-radius:4px;border:0.5px solid;display:inline-block;margin-bottom:.75rem}
+.iw-met{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.625rem 1rem;flex:1}
+</style>
+
+<div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.25rem 1.5rem 1rem;max-width:640px">
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+    <span style="font-size:11px;color:var(--color-text-tertiary);letter-spacing:.08em;text-transform:uppercase;font-weight:500">Intelligent Workflows</span>
+    <div style="display:flex;gap:7px;align-items:center">
+      <button class="iw-dot active" data-i="0" aria-label="Phase: Before"></button>
+      <button class="iw-dot" data-i="1" aria-label="Phase: Flow"></button>
+      <button class="iw-dot" data-i="2" aria-label="Phase: After"></button>
+    </div>
+  </div>
+
+  <div style="position:relative;height:200px;overflow:hidden">
+
+    <!-- PHASE 0: BEFORE — digital chaos -->
+    <div class="iw-ph active" id="iw-p0">
+      <span class="iw-badge" style="border-color:var(--color-border-danger);color:var(--color-text-danger)">Before</span>
+      <div style="position:relative;height:130px;overflow:hidden">
+        <div class="iw-a1" style="position:absolute;top:6px;left:12px;transform:rotate(-7deg);text-align:center;opacity:.85">
+          <i class="ti ti-table" style="font-size:26px;color:var(--color-text-danger)" aria-hidden="true"></i>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:1px">Spreadsheet</div>
+        </div>
+        <div class="iw-a2" style="position:absolute;top:4px;left:112px;transform:rotate(5deg);text-align:center;opacity:.6">
+          <i class="ti ti-mail-forward" style="font-size:24px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:1px">Re: Re: Re:</div>
+        </div>
+        <div class="iw-a3" style="position:absolute;top:16px;left:218px;transform:rotate(-5deg);text-align:center;opacity:.7">
+          <i class="ti ti-copy" style="font-size:24px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:1px">Copy-paste</div>
+        </div>
+        <div class="iw-a4" style="position:absolute;top:2px;left:322px;transform:rotate(9deg);text-align:center;opacity:.55">
+          <i class="ti ti-apps" style="font-size:22px;color:var(--color-text-danger)" aria-hidden="true"></i>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:1px">Siloed apps</div>
+        </div>
+        <div class="iw-a5" style="position:absolute;top:10px;left:416px;transform:rotate(-6deg);text-align:center;opacity:.6">
+          <i class="ti ti-file-spreadsheet" style="font-size:26px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+          <div style="font-size:9px;color:var(--color-text-tertiary);margin-top:1px">v3_FINAL2</div>
+        </div>
+        <div class="iw-a2" style="position:absolute;top:78px;left:52px;transform:rotate(4deg);opacity:.38">
+          <i class="ti ti-alert-circle" style="font-size:18px;color:var(--color-text-danger)" aria-hidden="true"></i>
+        </div>
+        <div class="iw-a1" style="position:absolute;top:80px;left:162px;transform:rotate(-11deg);opacity:.33">
+          <i class="ti ti-refresh-alert" style="font-size:20px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+        </div>
+        <div class="iw-a3" style="position:absolute;top:74px;left:270px;transform:rotate(7deg);opacity:.38">
+          <i class="ti ti-database-off" style="font-size:18px;color:var(--color-text-secondary)" aria-hidden="true"></i>
+        </div>
+        <div class="iw-a4" style="position:absolute;top:78px;left:372px;transform:rotate(-5deg);opacity:.33">
+          <i class="ti ti-clock-exclamation" style="font-size:20px;color:var(--color-text-danger)" aria-hidden="true"></i>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-tertiary);margin:0;text-align:center">Spreadsheets, email chains, siloed apps. Nothing talks to anything.</p>
+    </div>
+
+    <!-- PHASE 1: NODE FLOW -->
+    <div class="iw-ph" id="iw-p1">
+      <span class="iw-badge" style="border-color:var(--color-border-secondary);color:var(--color-text-secondary)">Processing</span>
+      <svg width="100%" viewBox="0 0 560 116" style="display:block">
+        <defs>
+          <marker id="iwarr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <line x1="155" y1="57" x2="207" y2="57" stroke="var(--color-border-secondary)" stroke-width="1.5" marker-end="url(#iwarr)"/>
+        <text x="182" y="48" text-anchor="middle" style="font-size:9px;fill:var(--color-text-tertiary)">validate</text>
+        <line x1="374" y1="57" x2="423" y2="57" stroke="var(--color-border-secondary)" stroke-width="1.5" marker-end="url(#iwarr)"/>
+        <text x="400" y="48" text-anchor="middle" style="font-size:9px;fill:var(--color-text-tertiary)">sync</text>
+        <rect x="12" y="30" width="143" height="54" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+        <text x="83" y="49" text-anchor="middle" style="font-size:9px;font-weight:500;fill:var(--color-text-tertiary);font-family:monospace;letter-spacing:.06em">WEBHOOK</text>
+        <text x="83" y="68" text-anchor="middle" style="font-size:13px;font-weight:500;fill:var(--color-text-primary)">Input</text>
+        <circle cx="148" cy="38" r="4" fill="#1D9E75"/>
+        <rect x="210" y="20" width="163" height="74" rx="8" fill="var(--color-background-primary)" stroke="var(--color-border-primary)" stroke-width="1"/>
+        <text x="291" y="42" text-anchor="middle" style="font-size:9px;font-weight:500;fill:var(--color-text-tertiary);font-family:monospace;letter-spacing:.06em">WORKFLOW</text>
+        <text x="291" y="66" text-anchor="middle" style="font-size:13px;font-weight:500;fill:var(--color-text-primary)">Optimized</text>
+        <circle cx="365" cy="30" r="4" fill="#EF9F27"/>
+        <rect x="426" y="30" width="122" height="54" rx="8" fill="var(--color-background-secondary)" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+        <text x="487" y="49" text-anchor="middle" style="font-size:9px;font-weight:500;fill:var(--color-text-tertiary);font-family:monospace;letter-spacing:.06em">CRM RECORD</text>
+        <text x="487" y="68" text-anchor="middle" style="font-size:13px;font-weight:500;fill:var(--color-text-primary)">Created</text>
+        <circle cx="540" cy="38" r="4" fill="#1D9E75"/>
+        <circle cy="57" r="5" fill="#1D9E75">
+          <animate attributeName="cx" values="157;205" dur="1.7s" repeatCount="indefinite" begin="0s"/>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" dur="1.7s" repeatCount="indefinite" begin="0s"/>
+        </circle>
+        <circle cy="57" r="5" fill="#1D9E75">
+          <animate attributeName="cx" values="157;205" dur="1.7s" repeatCount="indefinite" begin="0.85s"/>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" dur="1.7s" repeatCount="indefinite" begin="0.85s"/>
+        </circle>
+        <circle cy="57" r="5" fill="#EF9F27">
+          <animate attributeName="cx" values="376;421" dur="1.7s" repeatCount="indefinite" begin="0.4s"/>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" dur="1.7s" repeatCount="indefinite" begin="0.4s"/>
+        </circle>
+        <circle cy="57" r="5" fill="#1D9E75">
+          <animate attributeName="cx" values="376;421" dur="1.7s" repeatCount="indefinite" begin="1.25s"/>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" dur="1.7s" repeatCount="indefinite" begin="1.25s"/>
+        </circle>
+      </svg>
+      <p style="font-size:12px;color:var(--color-text-tertiary);margin:0;text-align:center">Raw data becomes structured records in milliseconds.</p>
+    </div>
+
+    <!-- PHASE 2: AFTER -->
+    <div class="iw-ph" id="iw-p2">
+      <span class="iw-badge" style="border-color:var(--color-border-success);color:var(--color-text-success)">After</span>
+      <div style="display:flex;gap:10px;margin-bottom:.625rem">
+        <div class="iw-met">
+          <div style="font-size:22px;font-weight:500;color:var(--color-text-success)">147</div>
+          <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px">Workflows automated</div>
+        </div>
+        <div class="iw-met">
+          <div style="font-size:22px;font-weight:500">99.2%</div>
+          <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px">Accuracy rate</div>
+        </div>
+        <div class="iw-met">
+          <div style="font-size:22px;font-weight:500;color:var(--color-text-info)">6h</div>
+          <div style="font-size:11px;color:var(--color-text-secondary);margin-top:2px">Saved per day</div>
+        </div>
+      </div>
+      <div style="border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:.5rem .875rem;display:flex;align-items:center;gap:.75rem">
+        <i class="ti ti-check" style="font-size:16px;color:var(--color-text-success)" aria-hidden="true"></i>
+        <div>
+          <div style="font-size:13px;font-weight:500">CRM record created</div>
+          <div style="font-size:11px;color:var(--color-text-tertiary)">contact.acme@corp.com · 2ms ago</div>
+        </div>
+        <div style="margin-left:auto;font-size:10px;font-weight:500;background:var(--color-background-success);color:var(--color-text-success);padding:2px 8px;border-radius:4px;white-space:nowrap">Success</div>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-tertiary);margin:.5rem 0 0;text-align:center">Clean, automated, auditable. Zero manual effort.</p>
+    </div>
+
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;border-top:0.5px solid var(--color-border-tertiary);padding-top:.625rem">
+    <button onclick="iwPv()" style="font-size:12px;background:none;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:3px 12px;cursor:pointer;color:var(--color-text-secondary)">← Prev</button>
+    <span style="font-size:11px;color:var(--color-text-tertiary)" id="iw-l">1 of 3 — Before</span>
+    <button onclick="iwNx()" style="font-size:12px;background:none;border:0.5px solid var(--color-border-secondary);border-radius:var(--border-radius-md);padding:3px 12px;cursor:pointer;color:var(--color-text-secondary)">Next →</button>
+  </div>
+</div>
+
+<script>
+let iC=0;
+const iP=document.querySelectorAll('.iw-ph'),iD=document.querySelectorAll('.iw-dot');
+const iN=['1 of 3 — Before','2 of 3 — Flow','3 of 3 — After'];
+function iGo(n){iP.forEach((p,i)=>p.classList.toggle('active',i===n));iD.forEach((d,i)=>d.classList.toggle('active',i===n));document.getElementById('iw-l').textContent=iN[n];iC=n}
+function iwNx(){clearInterval(iT);iGo((iC+1)%3)}
+function iwPv(){clearInterval(iT);iGo((iC+2)%3)}
+iD.forEach(d=>d.addEventListener('click',()=>{clearInterval(iT);iGo(+d.dataset.i)}));
+let iT=setInterval(()=>iGo((iC+1)%3),4500);
+</script>
