@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+body { background-color: #0B1120; color: #F8FAFC; font-family: 'Inter', sans-serif; }
+
+/* Global Typography & Layout */
+.accent-gradient { background: linear-gradient(to right, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.fluid-title { font-size: clamp(2.25rem, 5.5vw, 5rem); line-height: 1.1; }
+.fluid-spacing { margin-bottom: clamp(2rem, 5vh, 5rem); }
+.fluid-padding { padding-top: clamp(1.5rem, 4vh, 3rem); padding-bottom: clamp(2rem, 4vh, 4rem); }
+
+/* Infrastructure Page Specifics */
+.tech-border { border-left: 2px solid #38BDF8; padding-left: 1.5rem; }
+.spec-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; color: #64748B; margin-bottom: 0.5rem; }
+
+/* Animation Engine Classes */
+.glow-card { position: relative; overflow: hidden; }
+.glow-card::before {
+    content: ""; position: absolute; top: var(--y, 50%); left: var(--x, 50%); width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 40%);
+    transform: translate(-50%, -50%); pointer-events: none; opacity: 0; transition: opacity 0.3s ease; z-index: 0;
+}
+.glow-card:hover::before { opacity: 1; }
+.glow-card > * { position: relative; z-index: 1; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
