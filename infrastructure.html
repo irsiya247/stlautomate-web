@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infrastructure | STL Automate Technical Specifications</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-        body { background-color: #0B1120; color: #F8FAFC; font-family: 'Inter', sans-serif; }
-        .tech-border { border-left: 2px solid #38BDF8; padding-left: 1.5rem; }
-        .spec-label { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.2em; color: #64748B; margin-bottom: 0.5rem; }
-    </style>
+    
+    <link rel="stylesheet" href="global.css">
 </head>
 <body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMC41IiBmaWxsPSIjMzE0MTRDIi8+PC9zdmc+')]">
 
-    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto reveal">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
         </a>
@@ -26,14 +22,14 @@
     </nav>
 
     <main class="max-w-4xl mx-auto px-6 py-20">
-        <header class="mb-20">
+        <header class="mb-20 reveal">
             <div class="spec-label">Technical Documentation // V 1.0</div>
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 text-white">System Architecture</h1>
             <p class="text-lg text-slate-400 leading-relaxed">A breakdown of the security protocols and automation frameworks powering our client deployments.</p>
         </header>
 
         <section class="space-y-16">
-            <div class="tech-border">
+            <div class="tech-border group glow-card reveal p-4 -ml-4 rounded-xl">
                 <div class="spec-label text-sky-400">Security Standard</div>
                 <h3 class="text-2xl font-bold mb-4">Hardened Infrastructure</h3>
                 <p class="text-slate-400 text-sm mb-6 leading-relaxed">
@@ -59,7 +55,7 @@
                 </ul>
             </div>
 
-            <div class="tech-border border-slate-700">
+            <div class="tech-border border-slate-700 group glow-card reveal p-4 -ml-4 rounded-xl">
                 <div class="spec-label text-sky-400">Compute Layer</div>
                 <h3 class="text-2xl font-bold mb-4">Edge Automation</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">
@@ -69,7 +65,7 @@
         </section>
     </main>
 
-    <footer class="border-t border-slate-900 py-12 mt-20">
+    <footer class="border-t border-slate-900 py-12 mt-20 reveal">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-xs text-slate-600 font-medium">© 2026 STL Automate. All rights reserved.</div>
             <div class="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
@@ -80,5 +76,6 @@
         </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
