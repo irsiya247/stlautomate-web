@@ -6,26 +6,12 @@
     <title>Initiate Workflow | STL Automate</title>
     <meta name="description" content="Calculate your automation ROI and initiate an infrastructure audit.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-        body { background-color: #0B1120; color: #F8FAFC; font-family: 'Inter', sans-serif; }
-        .accent-gradient { background: linear-gradient(to right, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .input-field { 
-            background: rgba(15, 23, 42, 0.6); 
-            border: 1px solid rgba(51, 65, 85, 0.5); 
-            color: #fff; 
-            transition: all 0.3s ease; 
-        }
-        .input-field:focus { 
-            border-color: #38BDF8; 
-            outline: none; 
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.15); 
-        }
-    </style>
-</head>
-<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHIpxiBmaWxsPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIi8+PC9zdmc+')]">
     
-    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
+    <link rel="stylesheet" href="global.css">
+</head>
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
+    
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto reveal">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
         </a>
@@ -36,7 +22,7 @@
     </nav>
 
     <main class="max-w-3xl mx-auto px-6 py-12 md:py-20">
-        <header class="text-center mb-12">
+        <header class="text-center mb-12 reveal">
             <div class="inline-block border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
                 Secure Intake
             </div>
@@ -48,7 +34,7 @@
             </p>
         </header>
 
-        <form action="https://formspree.io/f/mqenrgda" method="POST" class="bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm">
+        <form action="https://formspree.io/f/mqenrgda" method="POST" class="bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm reveal">
             
             <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -92,5 +78,7 @@
             </p>
         </form>
     </main>
+
+    <script src="main.js"></script>
 </body>
 </html>
