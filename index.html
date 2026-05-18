@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>STL Automate | Lead Capture Automation St. Louis & AI Infrastructure</title>
+    <title>STL Automate | Lead Capture Automation St. Louis & AI Infrastructure</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     
-<meta name="description" content="We deploy custom AI infrastructure and lead capture automation for St. Louis businesses looking to optimize complex workflows, lower OPEX, and scale revenue.">
+    <meta name="description" content="We deploy custom AI infrastructure and lead capture automation for St. Louis businesses looking to optimize complex workflows, lower OPEX, and scale revenue.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
@@ -21,20 +21,27 @@
         .project-card:hover { border-color: rgba(56,189,248,0.5); }
         
         /* Calibrated Viewport Scaling */
-        .fluid-title {
-            font-size: clamp(2.25rem, 5.5vw, 5rem);
-            line-height: 1.1;
-        }
+        .fluid-title { font-size: clamp(2.25rem, 5.5vw, 5rem); line-height: 1.1; }
         .fluid-spacing { margin-bottom: clamp(2rem, 5vh, 5rem); }
-        .fluid-padding {
-            padding-top: clamp(1.5rem, 4vh, 3rem);
-            padding-bottom: clamp(2rem, 4vh, 4rem);
+        .fluid-padding { padding-top: clamp(1.5rem, 4vh, 3rem); padding-bottom: clamp(2rem, 4vh, 4rem); }
+
+        /* Animation Styles */
+        .glow-card { position: relative; overflow: hidden; }
+        .glow-card::before {
+            content: ""; position: absolute; top: var(--y, 50%); left: var(--x, 50%); width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 40%);
+            transform: translate(-50%, -50%); pointer-events: none; opacity: 0; transition: opacity 0.3s ease; z-index: 0;
         }
+        .glow-card:hover::before { opacity: 1; }
+        .glow-card > * { position: relative; z-index: 1; }
+
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoNTEsIDY1LCA4NSwgMC4xKSIvPjwvc3ZnPg==')]">
 
-    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto">
+    <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto reveal">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
         </a>
@@ -46,97 +53,89 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 fluid-padding">
-        <!-- Hero Section -->
         <header class="max-w-5xl fluid-spacing">
-    <div class="text-[10px] md:text-xs font-bold text-sky-500 uppercase tracking-[0.3em] mb-4 md:mb-6">
-        Lead Capture & Revenue Operations
-    </div>
-    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 w-full">
-        We build <span class="accent-gradient">automated systems.</span>
-    </h1>
-    <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
-        We turn messy business processes into clean, production-ready workflows: zero operational drag, infinite scale.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4">
-        <a href="intake.html" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-center hover:bg-sky-400 transition-colors">Start Implementation</a>
-        <a href="infrastructure.html" class="border border-slate-700 px-8 py-4 rounded-xl font-bold text-center hover:bg-slate-800 transition-colors">View Architecture</a>
-    </div>
-</header>
+            <div class="text-[10px] md:text-xs font-bold text-sky-500 uppercase tracking-[0.3em] mb-4 md:mb-6 reveal">
+                Lead Capture & Revenue Operations
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 w-full reveal">
+                We build <span class="accent-gradient">automated systems.</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl reveal">
+                We turn messy business processes into clean, production-ready workflows: zero operational drag, infinite scale.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 reveal">
+                <a href="intake.html" class="bg-white text-black px-8 py-4 rounded-xl font-bold text-center hover:bg-sky-400 transition-colors">Start Implementation</a>
+                <a href="infrastructure.html" class="border border-slate-700 px-8 py-4 rounded-xl font-bold text-center hover:bg-slate-800 transition-colors">View Architecture</a>
+            </div>
+        </header>
 
-        <!-- Stats/Proof -->
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-8 border-y border-slate-800/60 py-10 my-16">
-    <div>
-        <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">40%</div>
-        <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Margin Optimization</div>
-    </div>
-    <div>
-        <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">2.5k</div>
-        <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Hours Reclaimed</div>
-    </div>
-    <div>
-        <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">99.9%</div>
-        <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Execution Reliability</div>
-    </div>
-    <div>
-        <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">10x</div>
-        <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Frictionless Scale</div>
-    </div>
-</section>
-
-    <section class="mb-32">
-    <div class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em] mb-12">
-        Core Capabilities // System Architecture
-    </div>
-    <div class="flex flex-col gap-6">
-        
-        <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-sky-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group min-h-[280px]">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 md:gap-8 border-y border-slate-800/60 py-10 my-16 reveal">
             <div>
-                <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sky-500/20 transition-colors">
-                    <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </div>
-                <h3 class="text-2xl font-bold text-white mb-3">Intelligent Workflows</h3>
-                <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
-                    Eliminate the operational drag capping your daily capacity. We engineer self-sustaining pipelines that instantly capture, qualify, and route leads with zero human friction.
-                </p>
-
-                
-
-                
+                <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight"><span class="stat-counter" data-target="40">0</span>%</div>
+                <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Margin Optimization</div>
             </div>
-            <div class="mt-6 text-xs font-mono text-sky-400/80 tracking-widest uppercase">Engineered for immediate speed-to-lead</div>
-        </div>
+            <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight"><span class="stat-counter" data-target="2.5">0</span>k</div>
+                <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Hours Reclaimed</div>
+            </div>
+            <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight"><span class="stat-counter" data-target="99.9">0</span>%</div>
+                <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Execution Reliability</div>
+            </div>
+            <div>
+                <div class="text-4xl md:text-5xl font-extrabold text-white tracking-tight"><span class="stat-counter" data-target="10">0</span>x</div>
+                <div class="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-widest mt-2">Frictionless Scale</div>
+            </div>
+        </section>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-indigo-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
-                        <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <section class="mb-32 reveal">
+            <div class="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em] mb-12">
+                Core Capabilities // System Architecture
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-sky-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group min-h-[280px] glow-card">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sky-500/20 transition-colors">
+                            <svg class="w-6 h-6 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Intelligent Workflows</h3>
+                        <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+                            Eliminate the operational drag capping your daily capacity. We engineer self-sustaining pipelines that instantly capture, qualify, and route leads with zero human friction.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Institutional Reliability</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Mitigate execution risk with enterprise architecture. Automated pipelines run 24/7, ensuring absolute data integrity.
-                    </p>
+                    <div class="mt-6 text-xs font-mono text-sky-400/80 tracking-widest uppercase">Engineered for immediate speed-to-lead</div>
                 </div>
-            </div>
 
-            <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-emerald-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
-                        <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-indigo-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group glow-card">
+                        <div>
+                            <div class="w-10 h-10 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 transition-colors">
+                                <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Institutional Reliability</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Mitigate execution risk with enterprise architecture. Automated pipelines run 24/7, ensuring absolute data integrity.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Executive Oversight</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Command total visibility over operations. Track systemic efficiency and live webhook throughput to scale.
-                    </p>
+
+                    <div class="border border-slate-800/80 bg-slate-900/20 rounded-2xl p-8 hover:border-emerald-500/50 hover:bg-slate-900/40 transition-all duration-300 flex flex-col justify-between group glow-card">
+                        <div>
+                            <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Executive Oversight</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Command total visibility over operations. Track systemic efficiency and live webhook throughput to scale.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </div>
-</section>
+        </section>
     </main>
 
-    <footer class="border-t border-slate-900 py-12 mt-20">
+    <footer class="border-t border-slate-900 py-12 mt-20 reveal">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-xs text-slate-600 font-medium">© 2026 STL Automate. All rights reserved.</div>
             <div class="flex gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
@@ -146,80 +145,112 @@
             </div>
         </div>
     </footer>
-<div id="automation-audit-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
-    <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 12px; max-width: 500px; width: 100%; padding: 40px; position: relative; color: #c9d1d9; box-shadow: 0 10px 25px rgba(0,0,0,0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-        <button onclick="closePopup()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #8b949e; font-size: 24px; cursor: pointer;">&times;</button>
-        
-        <h3 style="color: #58a6ff; margin-top: 0; font-size: 22px; line-height: 1.4;">Get a Free Automation Audit</h3>
-        <p style="font-size: 15px; line-height: 1.6; color: #8b949e; margin-bottom: 25px;">See How We Generated 47 Leads/Week for a Dubai Real Estate Agency. Download our 1-page guide instantly.</p>
-        
-        <form id="lead-form" onsubmit="handleFormSubmit(event)">
-            <div style="margin-bottom: 15px;">
-                <input type="text" placeholder="First Name" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
-            </div>
-            <div style="margin-bottom: 20px;">
-                <input type="email" placeholder="Business Email" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
-            </div>
-            <button type="submit" style="width: 100%; padding: 12px; background: #238636; border: none; border-radius: 6px; color: #ffffff; font-weight: bold; cursor: pointer; font-size: 16px;">Claim Free 1-Page Guide</button>
-        </form>
+
+    <div id="automation-audit-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; justify-content: center; align-items: center; padding: 20px;">
+        <div style="background: #0d1117; border: 1px solid #30363d; border-radius: 12px; max-width: 500px; width: 100%; padding: 40px; position: relative; color: #c9d1d9; box-shadow: 0 10px 25px rgba(0,0,0,0.5); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            <button onclick="closePopup()" style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #8b949e; font-size: 24px; cursor: pointer;">&times;</button>
+            <h3 style="color: #58a6ff; margin-top: 0; font-size: 22px; line-height: 1.4;">Get a Free Automation Audit</h3>
+            <p style="font-size: 15px; line-height: 1.6; color: #8b949e; margin-bottom: 25px;">See How We Generated 47 Leads/Week for a Dubai Real Estate Agency. Download our 1-page guide instantly.</p>
+            <form id="lead-form" onsubmit="handleFormSubmit(event)">
+                <div style="margin-bottom: 15px;">
+                    <input type="text" placeholder="First Name" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="email" placeholder="Business Email" required style="width: 100%; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #c9d1d9; box-sizing: border-box;">
+                </div>
+                <button type="submit" style="width: 100%; padding: 12px; background: #238636; border: none; border-radius: 6px; color: #ffffff; font-weight: bold; cursor: pointer; font-size: 16px;">Claim Free 1-Page Guide</button>
+            </form>
+        </div>
     </div>
-</div>
 
 <script>
-// Trigger logic: Shows after 15 seconds or on exit intent
-let popupShown = false;
+    // Reveal Animations
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    revealElements.forEach(el => revealObserver.observe(el));
 
-function showPopup() {
-    if (!popupShown) {
-        document.getElementById('automation-audit-popup').style.display = 'flex';
-        popupShown = true;
+    // Mouse Tracking Glow
+    document.querySelectorAll('.glow-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+        });
+    });
+
+    // Number Counter Animation
+    const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseFloat(counter.getAttribute('data-target'));
+                const duration = 1500;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        // Check if it's a decimal number like 99.9 or 2.5
+                        counter.innerText = Number.isInteger(target) ? Math.ceil(current) : current.toFixed(1);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    };
+    const counterObserver = new IntersectionObserver(animateCounters, { threshold: 0.5 });
+    document.querySelectorAll('.stat-counter').forEach(c => counterObserver.observe(c));
+
+    // Popup Logic
+    let popupShown = false;
+    function showPopup() {
+        if (!popupShown) {
+            document.getElementById('automation-audit-popup').style.display = 'flex';
+            popupShown = true;
+        }
     }
-}
-
-function closePopup() {
-    document.getElementById('automation-audit-popup').style.display = 'none';
-}
-
-// 1. Timed Trigger (15 Seconds)
-setTimeout(showPopup, 15000);
-
-// 2. Exit Intent Trigger
-document.addEventListener('mouseleave', (e) => {
-    if (e.clientY < 20) {
-        showPopup();
+    function closePopup() {
+        document.getElementById('automation-audit-popup').style.display = 'none';
     }
-});
+    setTimeout(showPopup, 15000);
+    document.addEventListener('mouseleave', (e) => {
+        if (e.clientY < 20) showPopup();
+    });
 
-function handleFormSubmit(e) {
-    e.preventDefault();
-
-    // 1. Capture the input values immediately
-    const firstName = e.target[0].value;
-    const email = e.target[1].value;
-
-    try {
-        // 2. DELIVER THE ASSET FIRST (Bypasses popup blockers instantly)
-        const link = document.createElement('a');
-        link.href = 'dubai-lead-blueprint.pdf';
-        link.download = 'dubai-lead-blueprint.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
-        alert('Thank you! Your guide is downloading.');
-        closePopup();
-
-        // 3. FIRE MAKE WEBHOOK IN THE BACKGROUND (100% Free Tier)
-        fetch('https://hook.us2.make.com/8kec2dnxogj2pusai87ve7ecc5ba1d69', {
-            method: 'POST',
-            body: JSON.stringify({ name: firstName, email: email }),
-            headers: { 'Content-Type': 'application/json' }
-        }).catch(error => console.error("Webhook failed silently:", error));
-
-    } catch (error) {
-        console.error("Form submission execution error:", error);
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        const firstName = e.target[0].value;
+        const email = e.target[1].value;
+        try {
+            const link = document.createElement('a');
+            link.href = 'dubai-lead-blueprint.pdf';
+            link.download = 'dubai-lead-blueprint.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            alert('Thank you! Your guide is downloading.');
+            closePopup();
+            fetch('https://hook.us2.make.com/8kec2dnxogj2pusai87ve7ecc5ba1d69', {
+                method: 'POST',
+                body: JSON.stringify({ name: firstName, email: email }),
+                headers: { 'Content-Type': 'application/json' }
+            }).catch(error => console.error("Webhook failed silently:", error));
+        } catch (error) {
+            console.error("Form submission execution error:", error);
+        }
     }
-}
 </script>
 </body>
 </html>
