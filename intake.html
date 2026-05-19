@@ -4,49 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workflow Audit | STL Automate</title>
-    <meta name="description" content="Calculate your automation ROI and accelerate your lead flow.">
+    <meta name="description" content="AI Lead Capture and Scoring for St. Louis Agencies.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="favicon_v2.png" type="image/png">
-    
     <link rel="stylesheet" href="global.css">
 </head>
-<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')]">
-    
+<body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] text-slate-200">
+
     <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto reveal">
-        <a href="index.html" class="text-2xl font-extrabold tracking-tight">
-            STL <span class="text-sky-500">Automate</span>
+        <a href="index.html" class="flex items-center gap-3 text-2xl font-extrabold tracking-tight">
+            <img src="favicon_v2.png" alt="STL Automate Logo" class="w-8 h-8 object-contain">
+            <span>STL <span class="text-sky-500">Automate</span></span>
         </a>
         <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
-            <a href="infrastructure.html" class="text-slate-400 hover:text-white transition">Infrastructure</a>
-            <a href="portfolio.html" class="text-slate-400 hover:text-white transition">Portfolio</a>
+            <a href="index.html" class="text-slate-400 hover:text-white transition">Home</a>
+            <a href="terms.html" class="text-slate-400 hover:text-white transition">Terms</a>
+            <a href="privacy.html" class="text-slate-400 hover:text-white transition">Privacy</a>
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-6 py-12 md:py-16">
-        <header class="text-center mb-10 reveal">
-            <div class="flex justify-center mb-6">
-                <div class="w-16 h-16 bg-slate-900 border border-slate-800 rounded-2xl flex items-center justify-center shadow-lg">
-                    <img src="favicon_v2.png" alt="STL Automate Logo" class="w-10 h-10 object-contain">
-                </div>
+    <main class="max-w-4xl mx-auto px-6 py-12 md:py-20 reveal">
+        <header class="text-center mb-12">
+            <div class="inline-flex items-center gap-2 border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                St. Louis, MO
             </div>
-
-            <div class="inline-block border border-sky-500/30 bg-sky-500/10 rounded-full px-4 py-1 mb-6 text-xs text-sky-400 font-bold tracking-widest uppercase">
-                Revenue Operations
-            </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 block">
-                Accelerate Your <span class="accent-gradient">Lead Flow</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 text-white">
+                AI Lead Capture & Scoring<br>
+                <span class="accent-gradient">For St. Louis Agencies</span>
             </h1>
-            <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-6">
-                Detail your operational bottlenecks below. We will analyze your pipeline and map out a custom automation architecture to scale your revenue.
+            <p class="text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Powered by n8n, Clay, and Gemini AI. Submit your current process below for a free 30-minute workflow walkthrough and custom ROI map.
             </p>
-
-            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-2 rounded-full shadow-sm">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Trusted by St. Louis agencies | 47 leads/week generated
-            </div>
         </header>
 
-        <form id="intake-form" action="https://formspree.io/f/mqenrgda" method="POST" class="bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm reveal"
+        <form id="intake-form" action="https://formspree.io/f/mqenrgda" method="POST" class="bg-slate-900/40 border border-slate-800/60 rounded-2xl p-8 md:p-12 shadow-2xl backdrop-blur-sm reveal max-w-3xl mx-auto">
+            
             <div class="mb-8 rounded-xl overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl relative group">
                 <div class="absolute top-4 left-4 z-10 bg-slate-900/80 backdrop-blur-md border border-slate-700 text-xs font-bold text-sky-400 px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
@@ -56,56 +49,33 @@
                     <source src="demo.mp4" type="video/mp4">
                 </video>
             </div>
-            <input type="hidden" name="_next" value="https://stlautomate.com/thanks.html">
 
             <div class="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
-                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Stakeholder Name</label>
-                    <input type="text" name="name" required class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="John Doe">
+                    <label class="block text-sm font-bold text-slate-300 mb-2">Full Name</label>
+                    <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Corporate Email</label>
-                    <input type="email" name="email" required class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="director@company.com">
+                    <label class="block text-sm font-bold text-slate-300 mb-2">Work Email</label>
+                    <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition">
                 </div>
             </div>
 
             <div class="mb-6">
-                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Primary Inefficiency</label>
-                <select name="target_area" class="input-field w-full rounded-lg px-4 py-3 text-sm appearance-none cursor-pointer">
-                    <option value="slow_response">Lead response too slow</option>
-                    <option value="manual_entry">Manual data entry</option>
-                    <option value="no_visibility">No visibility into pipeline</option>
-                    <option value="scaling_headache">Scaling outreach is a headache</option>
-                </select>
+                <label class="block text-sm font-bold text-slate-300 mb-2">Agency / Company Name</label>
+                <input type="text" name="company" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition">
             </div>
 
             <div class="mb-8">
-                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Estimated Manual Hours Lost Weekly</label>
-                <div class="flex items-center gap-4">
-                    <input type="range" name="hours_lost" min="10" max="100" step="10" value="30" class="w-full accent-sky-500" oninput="this.nextElementSibling.value = this.value + '+'">
-                    <output class="text-sky-400 font-mono font-bold text-lg w-12">30+</output>
-                </div>
+                <label class="block text-sm font-bold text-slate-300 mb-2">Where is your biggest bottleneck right now?</label>
+                <textarea name="bottleneck" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-sky-500 transition" placeholder="e.g., Manual data entry, lead response time, unqualified calendar bookings..."></textarea>
             </div>
 
-            <div class="mb-8">
-                <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Additional Context (Optional)</label>
-                <textarea name="context" rows="3" class="input-field w-full rounded-lg px-4 py-3 text-sm placeholder-slate-600" placeholder="Briefly describe the software stack currently in use..."></textarea>
-            </div>
-
-            <button type="submit" class="w-full bg-white text-slate-950 font-extrabold py-4 rounded-xl transition duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:scale-[1.02] hover:bg-slate-200">
+            <button type="submit" class="w-full bg-sky-500 text-slate-950 font-extrabold text-lg py-4 rounded-xl hover:bg-sky-400 transition transform hover:-translate-y-1 shadow-lg shadow-sky-500/20">
                 Get My Workflow Audit
             </button>
-            <p class="text-center text-[10px] text-slate-600 font-mono uppercase tracking-[0.1em] mt-4">
-                Custom ROI plan delivered within 24 hours
-            </p>
-
-            <div class="mt-8 pt-6 border-t border-slate-800/60 text-center">
-                <p class="text-sm text-slate-400">
-                    Prefer to see a demo first? 
-                    <a href="#" class="text-sky-400 hover:text-sky-300 font-semibold transition ml-1 underline underline-offset-4 decoration-sky-500/30 hover:decoration-sky-400">Watch 2‑min Loom &rarr;</a>
-                </p>
-            </div>
         </form>
+
     </main>
 
     <script src="main.js"></script>
