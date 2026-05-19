@@ -93,25 +93,21 @@ if (popup) {
     }
 }
 
-// Formspree UI Bypass & Redirect
+// Formspree UI Bypass & Redirect with Data Passthrough
 document.addEventListener("DOMContentLoaded", function() {
     const intakeForm = document.getElementById("intake-form");
     
     if (intakeForm) {
         intakeForm.addEventListener("submit", async function(event) {
-            // 1. Stop Formspree from taking over the screen
             event.preventDefault(); 
 
-            // 2. Grab the data from the form
             const data = new FormData(intakeForm);
             
-            // 3. Change button text to show it is processing
             const submitBtn = intakeForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
             submitBtn.innerText = "Routing Data...";
             submitBtn.disabled = true;
 
-            // 4. Fire the payload silently in the background
             fetch(intakeForm.action, {
                 method: intakeForm.method,
                 body: data,
@@ -120,8 +116,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }).then(response => {
                 if (response.ok) {
-                    // 5. Success! Force the redirect to your Calendly page
-                    window.location.href = "thanks.html";
+                    // Success! Pack the name and email into the URL, then redirect
+                    const userName = data.get("name") || "";
+                    const userEmail = data.get("email") || "";
+                    const params = new URLSearchParams({ name: userName, email: userEmail });
+                    window.location.href = "thanks.html?" + params.toString();
                 } else {
                     submitBtn.innerText = "Error. Try Again.";
                     submitBtn.disabled = false;
