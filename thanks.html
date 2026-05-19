@@ -32,10 +32,28 @@
                 Your data has been routed to our internal system. Choose a time below for your free 30-minute workflow walkthrough and ROI mapping session.
             </p>
         </div>
+        
+            <div id="calendly-embed" class="w-full" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Grab the data passed from the intake form URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const prefillName = urlParams.get('name') || '';
+        const prefillEmail = urlParams.get('email') || '';
 
-        <div class="w-full max-w-4xl bg-slate-900/40 border border-slate-800/60 rounded-2xl shadow-2xl backdrop-blur-sm overflow-hidden reveal">
-            <div class="calendly-inline-widget w-full" data-url="https://calendly.com/irsiya247/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f172a&text_color=ffffff&primary_color=0ea5e9" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        // Inject it directly into the calendar block
+        Calendly.initInlineWidget({
+            url: 'https://calendly.com/irsiya247/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f172a&text_color=ffffff&primary_color=0ea5e9',
+            parentElement: document.getElementById('calendly-embed'),
+            prefill: {
+                name: prefillName,
+                email: prefillEmail
+            }
+        });
+    });
+</script>
+        
         </div>
 
     </main>
