@@ -41,6 +41,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const prefillName = urlParams.get('name') || '';
         const prefillEmail = urlParams.get('email') || '';
+        const prefillBottleneck = urlParams.get('bottleneck') || ''; // Grabs the bottleneck text
 
         // Inject it directly into the calendar block
         Calendly.initInlineWidget({
@@ -48,7 +49,10 @@
             parentElement: document.getElementById('calendly-embed'),
             prefill: {
                 name: prefillName,
-                email: prefillEmail
+                email: prefillEmail,
+                customAnswers: {
+                    a1: prefillBottleneck // Maps the bottleneck text to Calendly's first custom question
+                }
             }
         });
     });
