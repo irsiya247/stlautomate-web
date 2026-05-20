@@ -116,10 +116,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }).then(response => {
                 if (response.ok) {
-                    // Success! Pack the name and email into the URL, then redirect
+                    // Success! Pack name, email, AND the bottleneck text into the URL
                     const userName = data.get("name") || "";
                     const userEmail = data.get("email") || "";
-                    const params = new URLSearchParams({ name: userName, email: userEmail });
+                    const userBottleneck = data.get("bottleneck") || ""; // Grabs your exact textarea
+                    
+                    const params = new URLSearchParams({ 
+                        name: userName, 
+                        email: userEmail,
+                        bottleneck: userBottleneck 
+                    });
                     window.location.href = "thanks.html?" + params.toString();
                 } else {
                     submitBtn.innerText = "Error. Try Again.";
