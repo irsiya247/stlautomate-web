@@ -1,0 +1,88 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img" font-family="system-ui, -apple-system, sans-serif">
+  <title>STL Automate AI Receptionist System</title>
+  <desc>How the AI Receptionist pipeline works end to end.</desc>
+
+  <rect width="760" height="420" fill="#ffffff" rx="12"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="760" height="4" rx="2" fill="#f97316"/>
+
+  <!-- Title -->
+  <text x="380" y="36" text-anchor="middle" fill="#111" font-size="13" font-weight="700" letter-spacing="1">HOW THE AI RECEPTIONIST WORKS</text>
+  <text x="380" y="54" text-anchor="middle" fill="#999" font-size="10">Automated from first contact to booked call — zero manual effort</text>
+
+  <!-- Step 1 -->
+  <rect x="30" y="80" width="120" height="90" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+  <text x="90" y="110" text-anchor="middle" font-size="22">📨</text>
+  <text x="90" y="132" text-anchor="middle" fill="#111" font-size="10" font-weight="700">LEAD EMAILS IN</text>
+  <text x="90" y="148" text-anchor="middle" fill="#888" font-size="9">Inquiry received</text>
+  <text x="90" y="162" text-anchor="middle" fill="#888" font-size="9">via IMAP</text>
+
+  <line x1="150" y1="125" x2="178" y2="125" stroke="#ddd" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 2 -->
+  <rect x="178" y="80" width="120" height="90" rx="8" fill="#f5f3ff" stroke="#6366f1" stroke-width="2"/>
+  <text x="238" y="110" text-anchor="middle" font-size="22">🧠</text>
+  <text x="238" y="132" text-anchor="middle" fill="#111" font-size="10" font-weight="700">AI SCORES LEAD</text>
+  <text x="238" y="148" text-anchor="middle" fill="#888" font-size="9">Groq AI classifies</text>
+  <text x="238" y="162" text-anchor="middle" fill="#888" font-size="9">HOT / WARM / COLD</text>
+
+  <line x1="298" y1="125" x2="326" y2="125" stroke="#ddd" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 3 -->
+  <rect x="326" y="80" width="120" height="90" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="386" y="110" text-anchor="middle" font-size="22">⚡</text>
+  <text x="386" y="132" text-anchor="middle" fill="#111" font-size="10" font-weight="700">INSTANT REPLY</text>
+  <text x="386" y="148" text-anchor="middle" fill="#888" font-size="9">Personalized email</text>
+  <text x="386" y="162" text-anchor="middle" fill="#888" font-size="9">sent in seconds</text>
+
+  <line x1="446" y1="125" x2="474" y2="125" stroke="#ddd" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 4 -->
+  <rect x="474" y="80" width="120" height="90" rx="8" fill="#fefce8" stroke="#eab308" stroke-width="2"/>
+  <text x="534" y="110" text-anchor="middle" font-size="22">🔄</text>
+  <text x="534" y="132" text-anchor="middle" fill="#111" font-size="10" font-weight="700">AUTO FOLLOW-UP</text>
+  <text x="534" y="148" text-anchor="middle" fill="#888" font-size="9">Sequences run until</text>
+  <text x="534" y="162" text-anchor="middle" fill="#888" font-size="9">lead responds</text>
+
+  <line x1="594" y1="125" x2="622" y2="125" stroke="#ddd" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 5 -->
+  <rect x="622" y="80" width="108" height="90" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="676" y="110" text-anchor="middle" font-size="22">📅</text>
+  <text x="676" y="132" text-anchor="middle" fill="#111" font-size="10" font-weight="700">CALL BOOKED</text>
+  <text x="676" y="148" text-anchor="middle" fill="#888" font-size="9">Lead marked booked</text>
+  <text x="676" y="162" text-anchor="middle" fill="#888" font-size="9">sequence stops</text>
+
+  <!-- HOT LEAD CALLOUT -->
+  <rect x="178" y="200" width="296" height="60" rx="8" fill="#fff7ed" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="326" y="224" text-anchor="middle" fill="#f97316" font-size="10" font-weight="700">HOT LEAD ALERT</text>
+  <text x="326" y="242" text-anchor="middle" fill="#888" font-size="9">You get an instant Twilio SMS the moment a hot lead is identified</text>
+  <text x="326" y="255" text-anchor="middle" fill="#888" font-size="9">— before the auto-reply even sends</text>
+
+  <line x1="238" y1="170" x2="238" y2="200" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Stack line -->
+  <text x="380" y="296" text-anchor="middle" fill="#ccc" font-size="8" letter-spacing="2">POWERED BY  n8n · GROQ AI · GOOGLE SHEETS · TWILIO · GOOGLE CALENDAR</text>
+
+  <!-- Step numbers -->
+  <circle cx="30" cy="80" r="10" fill="#f97316"/>
+  <text x="30" y="84" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">1</text>
+  <circle cx="178" cy="80" r="10" fill="#6366f1"/>
+  <text x="178" y="84" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">2</text>
+  <circle cx="326" cy="80" r="10" fill="#22c55e"/>
+  <text x="326" y="84" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">3</text>
+  <circle cx="474" cy="80" r="10" fill="#eab308"/>
+  <text x="474" y="84" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">4</text>
+  <circle cx="622" cy="80" r="10" fill="#22c55e"/>
+  <text x="622" y="84" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">5</text>
+
+  <!-- Footer -->
+  <text x="380" y="340" text-anchor="middle" fill="#f97316" font-size="10" font-weight="600" letter-spacing="1">stlautomate.com</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#ddd"/>
+    </marker>
+  </defs>
+</svg>
