@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="global.css">
 </head>
 <body class="antialiased bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=')] min-h-screen flex flex-col">
-    
+
     <nav class="p-6 md:p-8 flex justify-between items-center max-w-6xl mx-auto w-full reveal">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight">
             STL <span class="text-sky-500">Automate</span>
@@ -17,33 +17,31 @@
     </nav>
 
     <main class="flex-grow flex flex-col items-center justify-start px-6 pt-4 pb-12 w-full">
-        
+
         <div class="max-w-2xl w-full text-center mb-8 reveal">
             <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-4 py-2 rounded-full mb-6">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 Intake Data Received
             </div>
-            
+
             <h1 class="text-3xl md:text-4xl font-extrabold tracking-tighter mb-4 text-white">
                 Step 2: <span class="accent-gradient">Secure Your Audit</span>
             </h1>
-            
+
             <p class="text-base text-slate-400 leading-relaxed">
                 Your data has been routed to our internal system. Choose a time below for your free 30-minute workflow walkthrough and ROI mapping session.
             </p>
         </div>
-        
+
             <div id="calendly-embed" class="w-full" style="min-width:320px;height:700px;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Grab the data passed from the intake form URL
         const urlParams = new URLSearchParams(window.location.search);
         const prefillName = urlParams.get('name') || '';
         const prefillEmail = urlParams.get('email') || '';
-        const prefillBottleneck = urlParams.get('bottleneck') || ''; // Grabs the bottleneck text
+        const prefillBottleneck = urlParams.get('bottleneck') || '';
 
-        // Inject it directly into the calendar block
         Calendly.initInlineWidget({
             url: 'https://calendly.com/irsiya247/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=0f172a&text_color=ffffff&primary_color=0ea5e9',
             parentElement: document.getElementById('calendly-embed'),
@@ -51,16 +49,30 @@
                 name: prefillName,
                 email: prefillEmail,
                 customAnswers: {
-                    a1: prefillBottleneck // Maps the bottleneck text to Calendly's first custom question
+                    a1: prefillBottleneck
                 }
             }
         });
     });
 </script>
-        
+
         </div>
 
     </main>
+
+    <footer class="border-t border-slate-900 py-12 mt-20 reveal">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <div class="text-xs text-slate-600 font-medium">© 2026 STL Automate LLC. All rights reserved.</div>
+                <div class="text-[10px] text-slate-700 mt-1">STL Automate LLC | St. Louis, MO</div>
+            </div>
+            <div class="flex gap-6 md:gap-8 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <a href="terms.html" class="hover:text-white transition">Terms</a>
+                <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+                <a href="mailto:matt@stlautomate.com" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="main.js"></script>
 </body>
